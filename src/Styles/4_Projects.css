@@ -1,0 +1,47 @@
+.projects-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+}
+.project-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.104vw solid #ccc; 
+    border-radius: 0.52vw; 
+    background-color: #f9f9f9;
+}
+.project-overview{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    gap: 50px;
+    margin-right: auto;
+}
+.tool-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    margin-bottom: 20px;
+    margin-right: 1vw;
+}
+.tool{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0.52vw; 
+    background-color: #408bf5;
+    color: white;
+    height: 2vw; 
+    font-size: 1vw;
+    font-weight: 700;
+    position: relative;
+    border-radius: .3vw;
+}

@@ -1,0 +1,85 @@
+.top-header {
+  text-align: left; /* Align text to the left */
+  padding-left: 15px; /* Add space between the text and the left border */
+  background-color: #408bf5; /* Keep the background color */
+  display: flex;
+  height: 75px; /* Set a fixed height for the header */
+  align-items: center; /* Center items vertically */
+  font-size: calc(10px + 1vmin);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: row;
+  justify-content: center, space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: none;
+  z-index: 3;
+}
+.top-header.hidden {
+  transform: translateY(-100%);
+}
+  
+.top-header.visible {
+  transform: translateY(0);
+}
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Space between items */
+  width: 100%; /* Full width of the header */
+  padding-right: 25px; /* Space on the right side */
+  gap: 5px; /* Space between social icons */
+}
+.social-icon{
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Space around the icon */
+  font-size: 30px; /* Icon size */
+  width: 40px; /* Set the width of the icons */
+  height: 40px; /* Set the height of the icons */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  cursor: pointer; /* Change the cursor to a pointer */
+  background-color: #112542; /* Optional hover background */
+  border-radius: 10px; /* Optional rounded corners */
+}
+.navwrap {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.nav_link{
+  color: #61dafb; 
+  flex-direction: row;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px; /* Space around the text and icon */
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Make it look clickable */
+  font: inherit; /* Inherit font styles from parent */
+}
+.nav_link:hover {
+  background-color: #112542; /* Optional hover background */
+  border-radius: 10px; /* Optional rounded corners */
+  font-weight: 400;
+}
+.bold {
+  font-weight: 400; /* Make the text bold */
+}
+.blurtext1 {
+  font-size: 8vw;
+  line-height: 1.1;
+  font-weight: 550;
+}
+.blurtext2 {
+  font-size: 3vw;
+  line-height: 1.1;
+  font-weight: 700;
+  animation-delay: 500ms;
+}

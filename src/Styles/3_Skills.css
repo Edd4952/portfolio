@@ -1,0 +1,73 @@
+.skilltype-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    gap: 0.52vw; 
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.42vw; 
+    width: 33.33%;
+    padding: 0.42vw;
+    border-radius: 8px;
+    border: 2px solid #3636367b;
+    background-color: hsl(0, 0%, 14%);
+}
+
+.skill-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.52vw;
+    gap: 0.52vw; 
+    background-color: #408bf5;
+    color: white;
+    height: 2vw; 
+    font-size: 1vw; 
+    position: relative;
+    border-radius: .3vw;
+    cursor: pointer;
+}
+
+.skill-header:hover {
+    background-color: #306bb5;
+}
+
+.skill-header:hover .skill-tooltip {
+    display: block;
+}
+
+.skill-content {
+    background-color: #f9f9f9;
+    font-size: 0.42vw;
+    color: #333;
+    justify-content: flex-start;    
+}
+
+.skill-tooltip {
+    display: none;
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    color: #333;
+    border: 0.104vw solid #ccc; /* doubled from 0.052vw */
+    padding: 0.5vw 0.5vw; /* doubled from 0.42vw 0.62vw */
+    border-radius: 0.64vw; /* doubled from 0.32vw */
+    box-shadow: 0 0.208vw 0.84vw rgba(0,0,0,0.15); /* doubled from 0.104vw 0.42vw */
+    z-index: 10;
+    top: 3vw; /* doubled from 5.72vw */
+    width: 300%;
+    font-size: 1.44vw; /* doubled from 0.72vw */
+    white-space: normal;
+}
