@@ -6,6 +6,7 @@ import spacepreview from "../Assets/spaceshipgame-preview.png";
 import portalpreview from "../Assets/portalvidthumbnail.png";
 import aquaopt from "../Assets/aquaschedule options.png";
 import aquasched from "../Assets/aquascheduleschedule.png"
+import box from "../Assets/boxingscreenshot.png";
 
 function Projects() {
 
@@ -15,7 +16,7 @@ function Projects() {
             title: "Science Project: Video based on the Portal games",
             description: portaldesc,
             link: (
-                <Link to="https://drive.google.com/file/d/1x0MXnmTKzz1VX35BpCfX2drqyYO5CX6v/view?usp=drive_link">
+                <Link style={{color: "white"}} to="https://drive.google.com/file/d/1x0MXnmTKzz1VX35BpCfX2drqyYO5CX6v/view?usp=drive_link">
                     Watch or download my video
                 </Link>
             ),
@@ -34,7 +35,7 @@ function Projects() {
             title: "Gamemaker Project: Spaceship Game",
             description: "A 2d game made from scratch with complete movement, collision detection, enemy AI, and basic game logic.",
             link: (
-                <Link to="https://gx.games/games/hmg0tx/2001-spaceship/tracks/193361a8-bcc2-4e89-b95d-40e97a322f8b/">
+                <Link style={{color: "white"}} to="https://gx.games/games/hmg0tx/2001-spaceship/tracks/193361a8-bcc2-4e89-b95d-40e97a322f8b/">
                     Check it out on GX.games
                 </Link>
             ),
@@ -51,7 +52,7 @@ function Projects() {
             description: "A react-expo application for creating and managing two-week schedules for my part-time job at Aquaguard",
             link: (
                 <div>
-                    <Link to="https://expo.dev/accounts/edd4952/projects/aquaschedule">
+                    <Link style={{color: "white"}} to="https://expo.dev/accounts/edd4952/projects/aquaschedule">
                         Check it out on Expo
                     </Link>
                     <br />
@@ -59,6 +60,7 @@ function Projects() {
                         href="/AquaSchedulefeatures.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{color: "white"}}
                     >
                         View AquaSchedule Presentation (PDF)
                     </a>
@@ -70,13 +72,44 @@ function Projects() {
                 "CSS"
             ],
             images: [aquaopt, aquasched]
+        },
+        {
+            id: 4,
+            title: "BoxingGroupchat",
+            description: "A react-expo webapp that hosts a groupchat for boxers to connect, share, and arrange sparring sessions. I learned to use Supabase for backend database management.",
+            link: (
+                <div>
+                    <Link style={{color: "white"}} to="https://boxinggroupchat.vercel.app/">
+                        Go to the groupchat
+                    </Link>
+                    <br />
+                    <Link style={{color: "white"}} to="https://expo.dev/accounts/edd4952/projects/boxinggroupchat">
+                        Check it out on Expo
+                    </Link>
+                    <br />
+                    <a
+                        href="/BoxingGroupchatFeatures.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        
+                    </a>
+                </div>
+            ),
+            tools: [
+                "React-Expo",
+                "TypeScript",
+                "CSS",
+                "Supabase",
+            ],
+            images: [box]
         }
     ];
     
     return (
-        <div>
+        <div style={{ backgroundColor: 'hsl(240, 50%, 20%)', zIndex: '1', position: 'relative' }}>
             <section id="4_Projects"></section>
-            <h1 style={{ paddingLeft: "20px", paddingTop: "90px", color: "white" }}>My Projects</h1>
+            <h1 style={{ paddingLeft: "20px", paddingTop: "90px", color: "white", marginTop: 0 }}>My Projects</h1>
             <div className="projects-container">{
                 projects.map(project => (
                     <div key={project.id} className="project-box">
@@ -84,7 +117,7 @@ function Projects() {
                             {/* All the info for the project */}
                             <h3 style={{ fontSize: "1.5em" }}>{project.title}</h3>
                             <p>{project.description}</p>
-                            {project.link}
+                            <p>{project.link}</p>
                             <div className="tool-container">
                                 {project.tools.map((tool, idx) => (
                                     <div key={idx} className="tool">{tool}</div>
@@ -110,7 +143,8 @@ function Projects() {
                                             src={src}
                                             alt=""
                                             style={{
-                                                height: project.id === 3 ? "300px" : "200px",
+                                                height: project.id === 1 || project.id === 2 ? "200px" : "300px",
+                                                //change this when adding new projects with different aspect ratios
                                                 width: "auto",
                                                 verticalAlign: "middle",
                                                 marginRight: "1vw"

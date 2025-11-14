@@ -32,8 +32,11 @@ function Header() {
   };
 
   return (
-    <header className={`top-header ${isVisible ? "visible" : "hidden"}`}>
-    
+    <header
+      className={`top-header ${isVisible ? "visible" : "hidden"}`}
+      style={{ zIndex: isVisible ? 10 : 3 }}
+    >
+      
       <nav className="navwrap">
         <button className="nav_link" style={{textDecoration: 'none', color: 'inherit' , display: 'flex', flexDirection: 'row'}} onClick={() => scrollToSection("1_Header")}><span className="bold">Edward </span>Zilbert</button>
         <button className="nav_link" onClick={() => scrollToSection("3_Skills")}>Skills</button>

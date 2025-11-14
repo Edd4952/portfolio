@@ -11,7 +11,7 @@ import Contact from "../Components/5_Contact.js";
 
 function Home(){
   return (
-    <div style={{ backgroundColor: 'hsl(240, 50%, 20%)' }}>
+    <div>
       <Header/>
       <Intro/>
       <Skills/>

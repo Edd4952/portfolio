@@ -1,7 +1,9 @@
+@import './App.css';
+
 .top-header {
   text-align: left; /* Align text to the left */
   padding-left: 15px; /* Add space between the text and the left border */
-  background-color: #408bf5; /* Keep the background color */
+  background-color: var(--blue3); /* Keep the background color */
   display: flex;
   height: 75px; /* Set a fixed height for the header */
   align-items: center; /* Center items vertically */

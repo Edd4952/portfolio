@@ -4,11 +4,13 @@ import "../Styles/App.css";
 import "../Styles/1_Header.css";
 import BlurText from "./BlurText";
 import { hover, vh } from "motion/react";
+import MatrixBackground from "./MatrixBackground";
 
 function Intro(){
     //"for the scroll listener"
     const [isVisible, setIsVisible] = useState(false);
     const [showTagline, setShowTagline] = useState(false);
+    const [headlineCycle, setHeadlineCycle] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,6 +27,22 @@ function Intro(){
         };
     }, []);
 
+    useEffect(() => {
+        const header = document.querySelector(".App-header");
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShowTagline(false);
+                    setHeadlineCycle(cycle => cycle + 1);
+                }
+            },
+            { threshold: 0.6 }
+        );
+
+        if (header) observer.observe(header);
+        return () => observer.disconnect();
+    }, []);
+
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -33,8 +51,8 @@ function Intro(){
     };
 
     return (
-        <div>
-            
+        <div className="intro-wrapper">
+            <MatrixBackground />
             <section id="1_Header"></section>
             {/*second header*/}
             <header className={`top-header`} style={{zIndex : "5"}}>        
@@ -58,10 +76,12 @@ function Intro(){
             </header>
             {/* Intro Section */}
             <header className="App-header">
-                <div style={{height: "50vh", marginTop: "12.5vh"}}>
+
+                <div style={{height: "50vh", marginTop: "2.5vh"}}>
                     <BlurText 
+                        key={headlineCycle}
                         text="Edward Zilbert"
-                        delay={150}
+                        delay={300}
                         animateBy="words"
                         direction="top"
                         onAnimationComplete={() => setShowTagline(true)}
@@ -71,8 +91,9 @@ function Intro(){
                 <div style={{height: "50vh"}}>
                     {showTagline && (
                         <BlurText
+                            key={headlineCycle + 1}
                             text="Software guy and future gazillionaire"
-                            delay={150}
+                            delay={300}
                             animateBy="words"
                             direction="top"
                             className="blurtext2"
