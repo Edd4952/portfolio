@@ -15,7 +15,6 @@ import intelliJ from "../Assets/intellij.png";
 import unity from "../Assets/unity.png";
 import gameMaker from "../Assets/gamemaker.png";
 import TypeScript from "../Assets/typescript.png";
-import { hslToRgb } from "@material-ui/core";
 
 
 
