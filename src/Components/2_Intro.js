@@ -14,33 +14,11 @@ function Intro(){
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsVisible(true);
-            } else {
-            setIsVisible(false);
-            }
+            setIsVisible(window.scrollY > 0);
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        const header = document.querySelector(".App-header");
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setShowTagline(false);
-                    setHeadlineCycle(cycle => cycle + 1);
-                }
-            },
-            { threshold: 0.6 }
-        );
-
-        if (header) observer.observe(header);
-        return () => observer.disconnect();
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const scrollToSection = (id) => {
@@ -54,30 +32,10 @@ function Intro(){
         <div className="intro-wrapper">
             <MatrixBackground />
             <section id="1_Header"></section>
-            {/*second header*/}
-            <header className={`top-header`} style={{zIndex : "5"}}>        
-                <nav className="navwrap">
-                    <button className="nav_link" onClick={() => scrollToSection("3_Skills")}>Skills</button>
-                    <button className="nav_link" onClick={() => scrollToSection("4_Projects")}>Projects</button>
-                    <button className="nav_link" onClick={() => scrollToSection("5_Contact")}>Contact</button>
-                </nav>
-        
-                <div className="socials">
-                    <a href="https://www.linkedin.com/in/edward-zilbert-251040216/" target="_blank" rel="noopener noreferrer">
-                        <img src={require("../Assets/linkedin.png")} alt="LinkedIn" className="social-icon" />
-                    </a>
-                    <a href="https://github.com/Edd4952" target="_blank" rel="noopener noreferrer">
-                        <img src={require("../Assets/github.png")} alt="Github" className="social-icon" />
-                    </a>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                        <img src={require("../Assets/resumeicon.png")} alt="Resume" className="social-icon" />
-                    </a>
-                </div>
-            </header>
+            
             {/* Intro Section */}
             <header className="App-header">
-
-                <div style={{height: "50vh", marginTop: "2.5vh"}}>
+                <div className="hero-text-block">
                     <BlurText 
                         key={headlineCycle}
                         text="Edward Zilbert"
@@ -87,8 +45,6 @@ function Intro(){
                         onAnimationComplete={() => setShowTagline(true)}
                         className="blurtext1"
                     />
-                </div>
-                <div style={{height: "50vh"}}>
                     {showTagline && (
                         <BlurText
                             key={headlineCycle + 1}
@@ -100,7 +56,6 @@ function Intro(){
                         />
                     )}
                 </div>
-                
             </header>
         </div>
     );

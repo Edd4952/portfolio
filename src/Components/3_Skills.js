@@ -35,27 +35,28 @@ function Skills() {
     const TypeScriptDesc = "Similar to JavaScript, but with static typing. I created a few small project apps with React Native using TypeScript.";    
 
     const languages = [
-        { id: 1, title: "Typescript", description: TypeScriptDesc, image: TypeScript },
-        { id: 2, title: "Javascript", description: javasdesc, image: js },
-        { id: 3, title: "React", description: reactdesc, image: react },
-        { id: 4, title: "CSS", description: cssdesc, image: css },
+        { id: 1, title: "GML", description: gmlDesc, image: gameMaker },
+        { id: 2, title: "Java", description: javaDesc, image: java },
+        { id: 3, title: "Python", description: pythonDesc, image: python },
+        { id: 4, title: "C#", description: csharpDesc, image: csharp },
         { id: 5, title: "C++", description: cppdesc, image: cpp },
-        { id: 6, title: "C#", description: csharpDesc, image: csharp },
-        { id: 7, title: "Python", description: pythonDesc, image: python },
-        { id: 8, title: "Java", description: javaDesc, image: java },
-        { id: 9, title: "GML", description: gmlDesc, image: gameMaker },
-
+        { id: 6, title: "CSS", description: cssdesc, image: css },
+        { id: 7, title: "React", description: reactdesc, image: react },
+        { id: 8, title: "Javascript", description: javasdesc, image: js },
+        { id: 9, title: "Typescript", description: TypeScriptDesc, image: TypeScript },
     ];
     const compsciSkills = [
-        { id: 1, title: "VSCode", description: vscodeDesc, image: vsCode },
-        { id: 2, title: "IntelliJ Idea", description: intellijdesc, image: intelliJ },
-        { id: 3, title: "Unity", description: unitydesc, image: unity },
-        { id: 4, title: "GameMaker Studio", description: gameMakerDesc, image: gameMaker },
+        { id: 1, title: "GameMaker Studio", description: gameMakerDesc, image: gameMaker },
+        { id: 2, title: "Unity", description: unitydesc, image: unity },
+        { id: 3, title: "IntelliJ Idea", description: intellijdesc, image: intelliJ },
+        { id: 4, title: "VSCode", description: vscodeDesc, image: vsCode },
     ];
     const softSkills = [
-        { id: 1, title: "Lifeguard", description: "Monitored pool/beach areas to ensure swimmer safety and prevent accidents. Enforced safety rules and learned to respond to emergencies, including rescues and first aid/CPR. Conducted safety checks and maintained facility cleanliness. Communicated effectively with head office and property managers to provide guidance and address concerns." },
+        { id: 1, title: "Ubereats", description: "Delivered food orders promptly and accurately, ensuring customer satisfaction. Managed time efficiently to meet delivery deadlines. Communicated effectively with customers and restaurant staff." },
         { id: 2, title: "Jewel Osco", description: "Handled cash, credit, and debit payments accurately, balancing registers at the end of shifts. Assisted customers with inquiries and resolved issues to ensure a positive shopping experience. Resolved conflicts and communicated to managers and staff." },
-        { id: 3, title: "Ubereats", description: "Delivered food orders promptly and accurately, ensuring customer satisfaction. Managed time efficiently to meet delivery deadlines. Communicated effectively with customers and restaurant staff." },
+        { id: 3, title: "Aquaguard", description: "Monitored pool/beach areas to ensure swimmer safety and prevent accidents. Enforced safety rules and learned to respond to emergencies, including rescues and first aid/CPR. Conducted safety checks and maintained facility cleanliness. Communicated effectively with head office and property managers to provide guidance and address concerns." },
+        { id: 4, title: "Cutco", description: "Generated leads independently and conducted live sales presentations in a commission-based environment. Applied consultation to identify customer needs and recommend solutions. Improved communication, persuasion, and time-management skills through high-volume client interactions." },
+        
     ];
 
     /*const toggleExpand = (id) => {
@@ -98,7 +99,7 @@ function Skills() {
                     {/*break into next line*/}
                     <div style={{ flexBasis: "100%", height: "0"}}></div>
                     
-                    {languages.map((language, index) => (
+                    {languages.slice().reverse().map((language, index) => (
                         <div
                           key={language.id}
                           className="skill-header"
@@ -118,7 +119,7 @@ function Skills() {
                     <h3 style={{ color: "#85929e ", margin: "0",}}>Computer Science Skills: </h3>
                     {/*break into next line*/}
                     <div style={{ flexBasis: "100%", height: "0" }}></div>
-                    {compsciSkills.map((skill, index) => (
+                    {compsciSkills.slice().reverse().map((skill, index) => (
                         <div
                           key={skill.id}
                           className="skill-header"
@@ -139,7 +140,7 @@ function Skills() {
                     {/*break into next line*/}
                     <div style={{ flexBasis: "100%", height: "0" }}></div>
                     
-                    {softSkills.map((softSkill, index) => (
+                    {softSkills.slice().reverse().map((softSkill, index) => (
                         <div
                           key={softSkill.id}
                           className="skill-header"

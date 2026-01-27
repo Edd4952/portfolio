@@ -71,6 +71,21 @@
   border-radius: 10px; /* Optional rounded corners */
   font-weight: 400;
 }
+.nav_link--brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 100;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.nav_link--brand.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 .bold {
   font-weight: 400; /* Make the text bold */
 }
@@ -84,4 +99,122 @@
   line-height: 1.1;
   font-weight: 700;
   animation-delay: 500ms;
+}
+.hero-text-block {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  }
+
+/* Tablets */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0 12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .navwrap {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .nav_link {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  .socials {
+    width: auto;
+    padding-right: 0;
+    gap: 4px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    font-size: 22px;
+  }
+
+  .blurtext1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .blurtext2 {
+    font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+  }
+  
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px;
+    transform: translateY(-100%);
+  }
+
+  .navwrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav_link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .socials {
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-text-block {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .blurtext1 {
+    font-size: clamp(5.4rem, 11vw, 3.2rem);
+    line-height: 1.2;
+  }
+
+  .blurtext2 {
+    font-size: clamp(3rem, 6.5vw, 2rem);
+    line-height: 1.35;
+  }
+
+  .blurtext1,
+  .blurtext2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .blurtext1 span,
+  .blurtext2 span {
+    display: block;
+  }
 }
