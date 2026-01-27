@@ -15,7 +15,7 @@ function Contact() {
             speed="5s"
             >
                 <a style={{ color: "white" }} href="mailto:zilbert3dward@gmail.com">zilbert3dward@gmail.com</a>
-                <a>(847)533-7331</a>
+                <a style={{ color: "white" }} href="tel:+18475337331">(847)533-7331</a>
                 <a style={{ color: "white" }} href="https://www.instagram.com/ezilbert.06/">ezilbert.06</a>
             </StarBorder>
         </div>

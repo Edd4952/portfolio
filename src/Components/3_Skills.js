@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import "../Styles/App.css";
 import "../Styles/3_Skills.css"; // Import your CSS file for styling
 //images
@@ -19,7 +18,6 @@ import TypeScript from "../Assets/typescript.png";
 
 
 function Skills() {
-    {/*const [setExpanded] = useState([]);*/}
     const javasdesc = "JavaScript is a versatile programming language used for web development, server-side scripting, and more.";
     const pythonDesc = "Python is a high-level, interpreted programming language known for its readability and versatility. ";
     const javaDesc = "Java is a widely-used object-oriented programming language. It is the first programming language I learned in highschool.";
@@ -58,14 +56,6 @@ function Skills() {
         { id: 4, title: "Cutco", description: "Generated leads independently and conducted live sales presentations in a commission-based environment. Applied consultation to identify customer needs and recommend solutions. Improved communication, persuasion, and time-management skills through high-volume client interactions." },
         
     ];
-
-    /*const toggleExpand = (id) => {
-        setExpanded(prev =>
-            prev.includes(id)
-                ? prev.filter(expandedId => expandedId !== id)
-                : [...prev, id]
-        );
-    };*/
 
     //scroll animation effect
     useEffect(() => {

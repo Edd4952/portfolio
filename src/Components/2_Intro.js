@@ -1,32 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "../Styles/App.css";
 import "../Styles/1_Header.css";
 import BlurText from "./BlurText";
-import { hover, vh } from "motion/react";
 import MatrixBackground from "./MatrixBackground";
 
 function Intro(){
-    //"for the scroll listener"
-    const [isVisible, setIsVisible] = useState(false);
     const [showTagline, setShowTagline] = useState(false);
-    const [headlineCycle, setHeadlineCycle] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsVisible(window.scrollY > 0);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    const headlineCycle = 0;
 
     return (
         <div className="intro-wrapper">

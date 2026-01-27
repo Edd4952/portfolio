@@ -1,6 +1,5 @@
 import React from "react";
 import "../Styles/App.css";
-import { Link } from 'react-router-dom'
 import Header from "../Components/1_Header.js";
 import Intro from "../Components/2_Intro.js";
 import Skills from "../Components/3_Skills.js";
