@@ -7,6 +7,9 @@ import portalpreview from "../Assets/portalvidthumbnail.png";
 import aquaopt from "../Assets/aquaschedule options.png";
 import aquasched from "../Assets/aquascheduleschedule.png"
 import box from "../Assets/boxingscreenshot.png";
+import cc1 from "../Assets/ccounter1.png";
+import cc2 from "../Assets/ccounter2.png";
+import cc3 from "../Assets/ccounter3.png";
 
 function Projects() {
 
@@ -82,6 +85,28 @@ function Projects() {
         },
         {
             id: 4,
+            title: "CCounter",
+            description: "A react-expo webapp I made for a friend in college. It sorts electrical switches into a two-column box by ampacities descending, while maintaining an even ampacity count between the columns.",
+            link: (
+                <div>
+                    <Link style={{color: "white"}} to="https://github.com/Edd4952/CCounter">
+                        View Github repo
+                    </Link>
+                </div>
+            ),
+            tools: [
+                "React-Expo",
+                "TypeScript",
+                "CSS",
+            ],
+            media: [
+                { type: "image", src: cc1 },
+                { type: "image", src: cc2 },
+                { type: "image", src: cc3 }
+            ]
+        },
+        {
+            id: 5,
             title: "BoxingGroupchat",
             description: "A react-expo webapp that hosts a groupchat for boxers to connect, share, and arrange sparring sessions. I learned to use Supabase for backend database management.",
             link: (
