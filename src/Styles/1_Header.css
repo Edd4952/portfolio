@@ -195,12 +195,13 @@
   }
 
   .blurtext1 {
-    font-size: clamp(5.4rem, 11vw, 3.2rem);
+    padding-top: 30px;
+    font-size: clamp(4rem, 11vw, 4rem);
     line-height: 1.2;
   }
 
   .blurtext2 {
-    font-size: clamp(3rem, 6.5vw, 2rem);
+    font-size: clamp(2.3rem, 6.5vw, 2rem);
     line-height: 1.35;
   }
 
